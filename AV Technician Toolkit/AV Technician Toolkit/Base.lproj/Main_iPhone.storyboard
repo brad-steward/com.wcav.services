@@ -25,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jj1-VG-6BA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2915" y="-2060"/>
+            <point key="canvasLocation" x="3663" y="-2764"/>
         </scene>
         <!--View Controller - Test Pattern Generator-->
         <scene sceneID="SGt-cb-JFc">
@@ -40,12 +40,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cUj-aF-hVu"/>
+                    <navigationItem key="navigationItem" title="Test Pattern Generator" id="cUj-aF-hVu"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABu-sc-1Yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3530" y="-2060"/>
+            <point key="canvasLocation" x="4278" y="-2764"/>
         </scene>
         <!--View Controller - Cable Guide-->
         <scene sceneID="NjO-Ps-VD7">
@@ -60,12 +60,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SdW-PG-nzc"/>
+                    <navigationItem key="navigationItem" title="Cable Guide" id="SdW-PG-nzc"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsV-1I-vZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="-1745"/>
+            <point key="canvasLocation" x="3076" y="-2341"/>
         </scene>
         <!--View Controller - Aspect Ratio Guide-->
         <scene sceneID="n8f-9P-gaE">
@@ -80,12 +80,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7Ph-f4-bw6"/>
+                    <navigationItem key="navigationItem" title="Aspect Ratio Guide" id="7Ph-f4-bw6"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md3-Tk-88B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="-760"/>
+            <point key="canvasLocation" x="3087" y="-1540"/>
         </scene>
         <!--Table View Controller - Video-->
         <scene sceneID="wqU-s1-A66">
@@ -244,7 +244,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qes-ib-TmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3148" y="-1135"/>
+            <point key="canvasLocation" x="3896" y="-1839"/>
         </scene>
         <!--Navigation Controller - Video-->
         <scene sceneID="1qh-XB-DAf">
@@ -260,7 +260,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wT-An-XDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2820" y="-1135"/>
+            <point key="canvasLocation" x="2096" y="-7"/>
         </scene>
         <!--View Controller - Screen Measure Tool-->
         <scene sceneID="Erm-d9-i8J">
@@ -275,12 +275,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fkp-Uk-dwg"/>
+                    <navigationItem key="navigationItem" title="Screen Measurement Tool" id="fkp-Uk-dwg"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJW-Oq-d14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="-81"/>
+            <point key="canvasLocation" x="3431" y="-785"/>
         </scene>
         <!--View Controller - Magnifying Camera-->
         <scene sceneID="dw1-pL-fE4">
@@ -296,14 +296,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fM5-eF-aGB"/>
+                    <navigationItem key="navigationItem" title="Magnifying Camera" id="fM5-eF-aGB"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgb-PH-qTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3749" y="20"/>
+            <point key="canvasLocation" x="4497" y="-684"/>
         </scene>
         <!--View Controller - Flashlight-->
         <scene sceneID="MoE-bs-h6E">
@@ -318,70 +318,61 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hv5-KN-CUf"/>
+                    <navigationItem key="navigationItem" title="Flashlight" id="hv5-KN-CUf"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ZX-wR-SB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3906" y="-1173"/>
+            <point key="canvasLocation" x="4654" y="-1877"/>
         </scene>
         <!--View Controller - Contact-->
         <scene sceneID="PMm-0g-iU2">
             <objects>
                 <viewController id="Icg-no-cUy" sceneMemberID="viewController">
-                    <webView key="view" contentMode="scaleToFill" id="dJ9-kY-xUG" userLabel="ContactWebView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </webView>
                     <tabBarItem key="tabBarItem" title="Contact" id="JBc-G8-550"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v32-Ow-vk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-474" y="198"/>
+            <point key="canvasLocation" x="174" y="258"/>
         </scene>
         <!--View Controller - Trouble-->
         <scene sceneID="PT7-kt-KIs">
             <objects>
-                <viewController id="E5B-dr-Zeo" sceneMemberID="viewController">
+                <viewController title="Trouble" id="E5B-dr-Zeo" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wvf-Ux-Rh5"/>
-                        <viewControllerLayoutGuide type="bottom" id="Oh1-Ms-3jX"/>
+                        <viewControllerLayoutGuide type="top" id="dpb-p0-EEH"/>
+                        <viewControllerLayoutGuide type="bottom" id="8nS-6d-vFs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WO1-E2-sp0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="N3I-UV-n9m">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trouble" image="trouble-1" id="jOV-HN-BSL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RN2-4K-sH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2411" y="1069"/>
+            <point key="canvasLocation" x="1999" y="1433"/>
         </scene>
         <!--View Controller - About-->
         <scene sceneID="E7q-aD-i5Q">
             <objects>
-                <viewController id="Eb6-bJ-DkM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sjr-0k-ztO"/>
-                        <viewControllerLayoutGuide type="bottom" id="aPy-sl-ugW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6fH-FM-u7c">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                <viewController title="About" id="Eb6-bJ-DkM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" id="Q84-0k-19I"/>
+                    <navigationItem key="navigationItem" title="About" id="VJU-Js-ZHH"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h54-0b-USn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-474" y="1085"/>
+            <point key="canvasLocation" x="434" y="1421"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
                 <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -389,16 +380,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="LOR-76-t7B" kind="relationship" relationship="viewControllers" id="L0P-Sq-4PP"/>
+                        <segue destination="j6y-xf-a21" kind="relationship" relationship="viewControllers" id="p7s-vn-5za"/>
                         <segue destination="E5B-dr-Zeo" kind="relationship" relationship="viewControllers" id="iNy-IW-7kb"/>
                         <segue destination="Icg-no-cUy" kind="relationship" relationship="viewControllers" id="6Bh-Ut-JQ7"/>
                         <segue destination="Eb6-bJ-DkM" kind="relationship" relationship="viewControllers" id="RZZ-j5-zCk"/>
-                        <segue destination="LOR-76-t7B" kind="relationship" relationship="viewControllers" id="L0P-Sq-4PP"/>
-                        <segue destination="j6y-xf-a21" kind="relationship" relationship="viewControllers" id="p7s-vn-5za"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="778"/>
+            <point key="canvasLocation" x="1132" y="846"/>
         </scene>
         <!--View Controller - dB Meter-->
         <scene sceneID="BHf-Lm-LKO">
@@ -580,17 +571,17 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Audio" id="YAp-Wm-nPh"/>
-                    <navigationItem key="navigationItem" title="Video" id="zdC-Rv-SvJ"/>
+                    <navigationItem key="navigationItem" title="Audio" id="zdC-Rv-SvJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znH-el-hDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1167" y="-1265"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Audio-->
         <scene sceneID="uuE-2q-cUc">
             <objects>
                 <navigationController definesPresentationContext="YES" id="j6y-xf-a21" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NQU-GF-UhV"/>
+                    <tabBarItem key="tabBarItem" title="Audio" id="NQU-GF-UhV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="paV-BT-Txo">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -600,7 +591,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPe-gO-OtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1493" y="-1265"/>
+            <point key="canvasLocation" x="1179" y="-144"/>
         </scene>
     </scenes>
     <resources>

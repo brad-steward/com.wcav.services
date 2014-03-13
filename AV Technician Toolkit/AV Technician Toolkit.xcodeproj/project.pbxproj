@@ -124,6 +124,7 @@
 				ABF6FD9418CF67C7008E247E /* FirstViewController.h */,
 				ABF6FD9518CF67C7008E247E /* FirstViewController.m */,
 				ABF6FD9718CF67C7008E247E /* SecondViewController.h */,
+				ABF6FD8818CF67C7008E247E /* main.m */,
 				ABF6FD9818CF67C7008E247E /* SecondViewController.m */,
 				ABF6FD9A18CF67C7008E247E /* Images.xcassets */,
 				ABF6FD8318CF67C7008E247E /* Supporting Files */,
@@ -136,7 +137,6 @@
 			children = (
 				ABF6FD8418CF67C7008E247E /* AV Technician Toolkit-Info.plist */,
 				ABF6FD8518CF67C7008E247E /* InfoPlist.strings */,
-				ABF6FD8818CF67C7008E247E /* main.m */,
 				ABF6FD8A18CF67C7008E247E /* AV Technician Toolkit-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -476,6 +476,7 @@
 				ABF6FDB318CF67C7008E247E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABF6FDB418CF67C7008E247E /* Build configuration list for PBXNativeTarget "AV Technician ToolkitTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +485,7 @@
 				ABF6FDB618CF67C7008E247E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
