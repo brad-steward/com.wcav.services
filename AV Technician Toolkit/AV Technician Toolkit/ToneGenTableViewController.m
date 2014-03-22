@@ -8,7 +8,9 @@
 
 #import "ToneGenTableViewController.h"
 
-@interface ToneGenTableViewController ()
+@interface ToneGenTableViewController () {
+    AVAudioPlayer *player;
+}
 
 @end
 
@@ -50,21 +52,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    // Return the number of rows in the section.
-    return 0;
+    return 6;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    for (int i = 0; i<=6; i++) {
+        [[cell textLabel] setText:@"Noise"];
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
     @try {
+        NSLog(@"Trying DBMeter");
         NSDictionary* recorderSettings = [NSDictionary dictionaryWithObjectsAndKeys:
                                           [NSNumber numberWithInt:kAudioFormatAppleIMA4],AVFormatIDKey,
                                           [NSNumber numberWithInt:44100],AVSampleRateKey,
@@ -37,27 +38,32 @@
                                           [NSNumber numberWithBool:NO],AVLinearPCMIsFloatKey,
                                           nil];
         NSError* error = nil;
-        recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL URLWithString:[NSTemporaryDirectory() stringByAppendingPathComponent:@"tmp.caf"]]  settings:recorderSettings error:&error];
+        NSLog(@"Trying DBMeter later");
+        recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL URLWithString:[NSTemporaryDirectory() stringByAppendingPathComponent:@"tmp.m4a"]]  settings:recorderSettings error:&error];
         recorder.meteringEnabled = YES;
         [recorder record];
         
         float decibels = 0;
         NSString *decString = @"";
         
+        int i = 0;
+        
         do {
             [recorder updateMeters];
             decibels = [recorder averagePowerForChannel:0];
             decString = [[NSNumber numberWithFloat:decibels] stringValue];
             [_meterReading setText:decString];
-        } while (true);
+            NSLog(@"update");
+            i++;
+        } while (i < 100);
 
-}
-@catch (NSException *exception) {
-    NSLog(@"ERROR");
-}
-@finally {
-    [_meterReading setText:@"ERROR"];
-}
+    }
+    @catch (NSException *exception) {
+        NSLog(@"ERROR");
+    }
+    @finally {
+        [_meterReading setText:@"ERROR"];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -51,7 +51,7 @@
                     finishedRow = YES;
                 }
             }
-            else if ( [scanner scanString:@"," intoString:NULL] ) {
+            else if ( [scanner scanString:@"" intoString:NULL] ) {
                 if ( insideQuotes && [scanner scanString:@"," intoString:NULL] ) {
                     // Replace double quotes with a single quote in the column string.
                     [currentColumn appendString:@","];
@@ -75,7 +75,7 @@
         }
         if ( [columns count] > 0 ) [rows addObject:columns];
     }
-    NSLog([rows objectAtIndex:1]);
+    NSLog([rows objectAtIndex:0]);
     return rows;
 }
 

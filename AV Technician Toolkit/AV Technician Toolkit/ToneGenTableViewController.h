@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ToneGenTableViewController : UITableViewController
+@interface ToneGenTableViewController : UITableViewController <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *noiseTable;
 @property (weak, nonatomic) IBOutlet UITableViewCell *pNoiseSelector;
@@ -17,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *vNoiseSelector;
 @property (weak, nonatomic) IBOutlet UITableViewCell *gNoiseSelector;
 @property (weak, nonatomic) IBOutlet UITableViewCell *wNoiseSelector;
-
 
 
 @end

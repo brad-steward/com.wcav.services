@@ -22,15 +22,6 @@
     if (self) {
         // Custom initialization
     }
-    
-    NSString *demoURL = @"file://localhost/Users/avprogrammer/com.wcav.services/AV Technician Toolkit/AV Technician Toolkit/demoCSV.csv";
-    NSURL *temp = [NSURL URLWithString:demoURL];
-    NSURL *url = temp;
-    if (url != nil && [url isFileURL]) {
-        [self handleOpenURL:url];
-    }
-    NSLog([url path]);
-    
     return self;
 }
 
@@ -38,12 +29,17 @@
 {
     [super viewDidLoad];
     
+    @try {
+        NSError *outError = nil;
+        NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"demoCSV"  ofType:@"csv"];
+        NSString *fileString = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:&outError];
+        self.importedRows = [self csvArrayToRoomArray:[fileString csvParser]];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Error loading the csv file");
+    }
     
-    NSError *outError = nil;
-    NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"demoCSV"  ofType:@"csv"];
-    NSString *fileString = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:&outError];
-    self.importedRows = [self csvArrayToRoomArray:[fileString csvParser]];
-}
+    }
 
 - (void)didReceiveMemoryWarning
 {
@@ -55,7 +51,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.importedRows count];
+    return [_importedRows count];
 }
 
 -(void)handleOpenURL:(NSURL *)url {
@@ -63,7 +59,7 @@
     NSString *fileString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&outError];
     
     if (fileString != nil) {
-        self.importedRows = [self csvArrayToRoomArray:[fileString csvParser]];
+        _importedRows = [self csvArrayToRoomArray:[fileString csvParser]];
     }
     
     NSLog(fileString);
@@ -76,7 +72,7 @@
     NSMutableArray *mutArr = [[NSMutableArray alloc] init];
     
     for (NSArray *row in csvArray) {
-        if(i >= 0) {
+        if(i > 0) {
             Room *_room = [[Room alloc] init];
             
             _room.roomNum = [row objectAtIndex:0];
@@ -100,9 +96,9 @@
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if(cell == nil) {
+    //if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    //}
     
     Room *r = (Room *)[self.importedRows objectAtIndex:indexPath.row];
     cell.textLabel.text = r.building, @" ", r.roomNum;
