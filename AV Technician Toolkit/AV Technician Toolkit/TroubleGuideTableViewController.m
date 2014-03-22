@@ -22,6 +22,15 @@
     if (self) {
         // Custom initialization
     }
+    
+    NSString *demoURL = @"file://localhost/Users/avprogrammer/com.wcav.services/AV Technician Toolkit/AV Technician Toolkit/demoCSV.csv";
+    NSURL *temp = [NSURL URLWithString:demoURL];
+    NSURL *url = temp;
+    if (url != nil && [url isFileURL]) {
+        [self handleOpenURL:url];
+    }
+    NSLog([url path]);
+    
     return self;
 }
 
@@ -30,7 +39,10 @@
     [super viewDidLoad];
     
     
-    
+    NSError *outError = nil;
+    NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"demoCSV"  ofType:@"csv"];
+    NSString *fileString = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:&outError];
+    self.importedRows = [self csvArrayToRoomArray:[fileString csvParser]];
 }
 
 - (void)didReceiveMemoryWarning

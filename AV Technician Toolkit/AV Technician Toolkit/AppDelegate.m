@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString *demoURL = @"Users/avprogrammer/com.wcav.services/AV Technician Toolkit/AV Technician Toolkit/demoCSV.csv";
+    NSString *demoURL = @"file://localhost/Users/avprogrammer/com.wcav.services/AV Technician Toolkit/AV Technician Toolkit/demoCSV.csv";
     NSURL *temp = [NSURL URLWithString:demoURL];
     NSURL *url = (NSURL *)[launchOptions valueForKey:UIApplicationLaunchOptionsURLKey];
     url = temp;
@@ -25,13 +25,13 @@
 }
 
 -(BOOL) application:(UIApplication *)application openURl:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    NSString *demoURL = @"Users/avprogrammer/com.wcav.services/AV Technician Toolkit/AV Technician Toolkit/demoCSV.csv";
+    NSString *demoURL = @"file://localhost/Users/avprogrammer/com.wcav.services/AV Technician Toolkit/AV Technician Toolkit/demoCSV.csv";
     NSURL *temp = [NSURL URLWithString:demoURL];
     url = temp;
     if (url != nil && [url isFileURL]) {
         [self.viewController handleOpenURL:url];
     }
-    NSLog(temp);
+    NSLog([temp path]);
     return YES;
     
 }

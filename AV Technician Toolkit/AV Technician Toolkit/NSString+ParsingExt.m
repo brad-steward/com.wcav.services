@@ -28,7 +28,7 @@
     while ( ![scanner isAtEnd] ) {
         BOOL insideQuotes = NO;
         BOOL finishedRow = NO;
-        NSMutableArray *columns = [NSMutableArray arrayWithCapacity:3];
+        NSMutableArray *columns = [NSMutableArray arrayWithCapacity:4];
         NSMutableString *currentColumn = [NSMutableString string];
         while ( !finishedRow ) {
             NSString *tempString;

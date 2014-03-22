@@ -379,6 +379,9 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Troubleshooting Guide" id="qmX-dd-njL"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="vJh-Kf-WTE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="2095" y="1424"/>
