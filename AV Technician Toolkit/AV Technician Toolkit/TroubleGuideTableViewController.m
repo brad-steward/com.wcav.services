@@ -14,6 +14,8 @@
 
 @implementation TroubleGuideTableViewController
 
+@synthesize importedRows = _importedRows;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -28,6 +30,7 @@
     [super viewDidLoad];
     
     
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,30 +41,62 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.importedRows count];
 }
 
-/*
+-(void)handleOpenURL:(NSURL *)url {
+    NSError *outError;
+    NSString *fileString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&outError];
+    
+    if (fileString != nil) {
+        self.importedRows = [self csvArrayToRoomArray:[fileString csvParser]];
+    }
+    
+    NSLog(fileString);
+    
+    [self.tableView reloadData];
+}
+
+-(NSArray *) csvArrayToRoomArray:(NSArray *)csvArray {
+    int i = 0;
+    NSMutableArray *mutArr = [[NSMutableArray alloc] init];
+    
+    for (NSArray *row in csvArray) {
+        if(i >= 0) {
+            Room *_room = [[Room alloc] init];
+            
+            _room.roomNum = [row objectAtIndex:0];
+            NSLog(_room.roomNum);
+            _room.building = [row objectAtIndex:1];
+            NSLog(_room.building);
+            _room.type = [row objectAtIndex:2];
+            NSLog(_room.type);
+            
+            [mutArr addObject:_room];
+        }
+        i++;
+    }
+    
+    return (NSArray *) mutArr;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    Room *r = (Room *)[self.importedRows objectAtIndex:indexPath.row];
+    cell.textLabel.text = r.building, @" ", r.roomNum;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

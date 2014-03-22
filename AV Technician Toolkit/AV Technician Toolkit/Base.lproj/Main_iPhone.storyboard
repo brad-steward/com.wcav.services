@@ -323,17 +323,6 @@
             </objects>
             <point key="canvasLocation" x="4654" y="-1877"/>
         </scene>
-        <!--View Controller - Contact-->
-        <scene sceneID="PMm-0g-iU2">
-            <objects>
-                <viewController id="Icg-no-cUy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contact" id="JBc-G8-550"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v32-Ow-vk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="174" y="258"/>
-        </scene>
         <!--View Controller - About-->
         <scene sceneID="E7q-aD-i5Q">
             <objects>
@@ -362,7 +351,6 @@
                         <segue destination="LOR-76-t7B" kind="relationship" relationship="viewControllers" id="L0P-Sq-4PP"/>
                         <segue destination="j6y-xf-a21" kind="relationship" relationship="viewControllers" id="p7s-vn-5za"/>
                         <segue destination="Zcz-bA-HqX" kind="relationship" relationship="viewControllers" id="RXZ-Jf-pM9"/>
-                        <segue destination="Icg-no-cUy" kind="relationship" relationship="viewControllers" id="6Bh-Ut-JQ7"/>
                         <segue destination="Eb6-bJ-DkM" kind="relationship" relationship="viewControllers" id="RZZ-j5-zCk"/>
                     </connections>
                 </tabBarController>
@@ -370,10 +358,11 @@
             </objects>
             <point key="canvasLocation" x="1132" y="846"/>
         </scene>
-        <!--Table View Controller - Troubleshooting Guide-->
+        <!--Trouble Guide Table View Controller - Troubleshooting Guide-->
         <scene sceneID="XqD-d4-6Px">
             <objects>
-                <tableViewController id="hHr-3g-j04" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7i-qg-tE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="hHr-3g-j04" customClass="TroubleGuideTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Nrt-Su-tSa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,20 +377,16 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hHr-3g-j04" id="rsH-Q0-NJU"/>
-                            <outlet property="delegate" destination="hHr-3g-j04" id="bQv-GK-gbZ"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Troubleshooting Guide" id="qmX-dd-njL"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R7i-qg-tE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2095" y="1424"/>
         </scene>
         <!--Navigation Controller - Trouble-->
         <scene sceneID="w6c-4L-iN1">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7s-px-FON" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="Zcz-bA-HqX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Trouble" id="hib-2Y-ek2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OkW-tJ-amS">
@@ -411,7 +396,6 @@
                         <segue destination="hHr-3g-j04" kind="relationship" relationship="rootViewController" id="twe-C9-9j8"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L7s-px-FON" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1561" y="1424"/>
         </scene>
@@ -450,17 +434,8 @@
         <scene sceneID="wSY-nY-lPC">
             <objects>
                 <viewController title="Tone Generator" id="3T2-I6-7kz" customClass="ToneGenTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mTQ-48-JMS">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections/>
-                    </tableView>
                     <navigationItem key="navigationItem" title="Tone Generator" id="uZm-iu-18J"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <connections>
-                        <outlet property="noiseTable" destination="mTQ-48-JMS" id="G58-Tk-28a"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aQ-7h-fTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

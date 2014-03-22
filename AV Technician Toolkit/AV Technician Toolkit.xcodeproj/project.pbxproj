@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AB08645E18DD1C6A0064C49A /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB08645D18DD1C6A0064C49A /* AudioPlayer.m */; };
+		AB1C081918DE0303005DA687 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1C081818DE0303005DA687 /* Room.m */; };
+		AB1C081C18DE05EF005DA687 /* NSString+ParsingExt.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1C081B18DE05EF005DA687 /* NSString+ParsingExt.m */; };
+		AB1C081E18DE0FEA005DA687 /* demoCSV.csv in Resources */ = {isa = PBXBuildFile; fileRef = AB1C081D18DE0FEA005DA687 /* demoCSV.csv */; };
 		AB28593C18DB9EBB00C9E69F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB28593B18DB9EBB00C9E69F /* MobileCoreServices.framework */; };
 		AB28593F18DB9ED800C9E69F /* MagCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28593E18DB9ED800C9E69F /* MagCameraViewController.m */; };
 		AB28594218DBD23A00C9E69F /* AudioRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28594118DBD23A00C9E69F /* AudioRecorderViewController.m */; };
@@ -47,6 +50,11 @@
 /* Begin PBXFileReference section */
 		AB08645C18DD1C6A0064C49A /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 		AB08645D18DD1C6A0064C49A /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		AB1C081718DE0303005DA687 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		AB1C081818DE0303005DA687 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		AB1C081A18DE05EF005DA687 /* NSString+ParsingExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ParsingExt.h"; sourceTree = "<group>"; };
+		AB1C081B18DE05EF005DA687 /* NSString+ParsingExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ParsingExt.m"; sourceTree = "<group>"; };
+		AB1C081D18DE0FEA005DA687 /* demoCSV.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demoCSV.csv; sourceTree = "<group>"; };
 		AB28593B18DB9EBB00C9E69F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AB28593D18DB9ED800C9E69F /* MagCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagCameraViewController.h; sourceTree = "<group>"; };
 		AB28593E18DB9ED800C9E69F /* MagCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagCameraViewController.m; sourceTree = "<group>"; };
@@ -146,6 +154,7 @@
 		ABF6FD8218CF67C7008E247E /* AV Technician Toolkit */ = {
 			isa = PBXGroup;
 			children = (
+				AB1C081D18DE0FEA005DA687 /* demoCSV.csv */,
 				ABF2DD4218DB88090094D553 /* FlashlightViewController.h */,
 				ABF2DD4318DB88090094D553 /* FlashlightViewController.m */,
 				AB28593D18DB9ED800C9E69F /* MagCameraViewController.h */,
@@ -171,6 +180,10 @@
 				ABFC863118DD2356002DFD38 /* ToneGenTableViewController.m */,
 				ABFC863318DD310B002DFD38 /* TroubleGuideTableViewController.h */,
 				ABFC863418DD310B002DFD38 /* TroubleGuideTableViewController.m */,
+				AB1C081718DE0303005DA687 /* Room.h */,
+				AB1C081818DE0303005DA687 /* Room.m */,
+				AB1C081A18DE05EF005DA687 /* NSString+ParsingExt.h */,
+				AB1C081B18DE05EF005DA687 /* NSString+ParsingExt.m */,
 			);
 			path = "AV Technician Toolkit";
 			sourceTree = "<group>";
@@ -280,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF6FD9318CF67C7008E247E /* Main_iPad.storyboard in Resources */,
+				AB1C081E18DE0FEA005DA687 /* demoCSV.csv in Resources */,
 				ABF6FD9B18CF67C7008E247E /* Images.xcassets in Resources */,
 				ABF6FD9018CF67C7008E247E /* Main_iPhone.storyboard in Resources */,
 				ABF6FD8718CF67C7008E247E /* InfoPlist.strings in Resources */,
@@ -303,10 +317,12 @@
 			files = (
 				ABF6FD9918CF67C7008E247E /* SecondViewController.m in Sources */,
 				ABFC863518DD310B002DFD38 /* TroubleGuideTableViewController.m in Sources */,
+				AB1C081C18DE05EF005DA687 /* NSString+ParsingExt.m in Sources */,
 				AB08645E18DD1C6A0064C49A /* AudioPlayer.m in Sources */,
 				AB28593F18DB9ED800C9E69F /* MagCameraViewController.m in Sources */,
 				ABF6FD8D18CF67C7008E247E /* AppDelegate.m in Sources */,
 				AB28594218DBD23A00C9E69F /* AudioRecorderViewController.m in Sources */,
+				AB1C081918DE0303005DA687 /* Room.m in Sources */,
 				AB72340418DC8FA000ACBB52 /* DBMeterViewController.m in Sources */,
 				ABFC863218DD2356002DFD38 /* ToneGenTableViewController.m in Sources */,
 				ABF2DD4418DB88090094D553 /* FlashlightViewController.m in Sources */,
@@ -452,6 +468,7 @@
 				INFOPLIST_FILE = "AV Technician Toolkit/AV Technician Toolkit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -467,6 +484,7 @@
 				INFOPLIST_FILE = "AV Technician Toolkit/AV Technician Toolkit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

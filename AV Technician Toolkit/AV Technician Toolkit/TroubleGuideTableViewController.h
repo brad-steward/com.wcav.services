@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Room.h"
+#import "NSString+ParsingExt.h"
 
 @interface TroubleGuideTableViewController : UITableViewController
+
+-(void) handleOpenURL:(NSURL *)url;
+
+@property (nonatomic, retain) NSArray *importedRows;
 
 @end

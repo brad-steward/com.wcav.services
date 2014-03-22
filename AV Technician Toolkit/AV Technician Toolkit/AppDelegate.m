@@ -9,11 +9,31 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSString *demoURL = @"Users/avprogrammer/com.wcav.services/AV Technician Toolkit/AV Technician Toolkit/demoCSV.csv";
+    NSURL *temp = [NSURL URLWithString:demoURL];
+    NSURL *url = (NSURL *)[launchOptions valueForKey:UIApplicationLaunchOptionsURLKey];
+    url = temp;
+    if (url != nil && [url isFileURL]) {
+        [self.viewController handleOpenURL:url];
+    }
+    NSLog([temp path]);
     return YES;
+}
+
+-(BOOL) application:(UIApplication *)application openURl:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSString *demoURL = @"Users/avprogrammer/com.wcav.services/AV Technician Toolkit/AV Technician Toolkit/demoCSV.csv";
+    NSURL *temp = [NSURL URLWithString:demoURL];
+    url = temp;
+    if (url != nil && [url isFileURL]) {
+        [self.viewController handleOpenURL:url];
+    }
+    NSLog(temp);
+    return YES;
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
