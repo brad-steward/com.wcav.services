@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB08645E18DD1C6A0064C49A /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB08645D18DD1C6A0064C49A /* AudioPlayer.m */; };
 		AB28593C18DB9EBB00C9E69F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB28593B18DB9EBB00C9E69F /* MobileCoreServices.framework */; };
 		AB28593F18DB9ED800C9E69F /* MagCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28593E18DB9ED800C9E69F /* MagCameraViewController.m */; };
 		AB28594218DBD23A00C9E69F /* AudioRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28594118DBD23A00C9E69F /* AudioRecorderViewController.m */; };
+		AB72340418DC8FA000ACBB52 /* DBMeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72340318DC8FA000ACBB52 /* DBMeterViewController.m */; };
 		ABF2DD4418DB88090094D553 /* FlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD4318DB88090094D553 /* FlashlightViewController.m */; };
 		ABF2DD4618DB8B6C0094D553 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF2DD4518DB8B6C0094D553 /* AVFoundation.framework */; };
 		ABF6FD7D18CF67C7008E247E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF6FD7C18CF67C7008E247E /* Foundation.framework */; };
@@ -28,6 +30,8 @@
 		ABF6FDA418CF67C7008E247E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF6FD8018CF67C7008E247E /* UIKit.framework */; };
 		ABF6FDAC18CF67C7008E247E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABF6FDAA18CF67C7008E247E /* InfoPlist.strings */; };
 		ABF6FDAE18CF67C7008E247E /* AV_Technician_ToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF6FDAD18CF67C7008E247E /* AV_Technician_ToolkitTests.m */; };
+		ABFC863218DD2356002DFD38 /* ToneGenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFC863118DD2356002DFD38 /* ToneGenTableViewController.m */; };
+		ABFC863518DD310B002DFD38 /* TroubleGuideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFC863418DD310B002DFD38 /* TroubleGuideTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB08645C18DD1C6A0064C49A /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		AB08645D18DD1C6A0064C49A /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		AB28593B18DB9EBB00C9E69F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AB28593D18DB9ED800C9E69F /* MagCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagCameraViewController.h; sourceTree = "<group>"; };
 		AB28593E18DB9ED800C9E69F /* MagCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagCameraViewController.m; sourceTree = "<group>"; };
 		AB28594018DBD23A00C9E69F /* AudioRecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRecorderViewController.h; sourceTree = "<group>"; };
 		AB28594118DBD23A00C9E69F /* AudioRecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRecorderViewController.m; sourceTree = "<group>"; };
+		AB72340218DC8FA000ACBB52 /* DBMeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMeterViewController.h; sourceTree = "<group>"; };
+		AB72340318DC8FA000ACBB52 /* DBMeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMeterViewController.m; sourceTree = "<group>"; };
 		ABF2DD4218DB88090094D553 /* FlashlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashlightViewController.h; sourceTree = "<group>"; };
 		ABF2DD4318DB88090094D553 /* FlashlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashlightViewController.m; sourceTree = "<group>"; };
 		ABF2DD4518DB8B6C0094D553 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -71,6 +79,10 @@
 		ABF6FDA918CF67C7008E247E /* AV Technician ToolkitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AV Technician ToolkitTests-Info.plist"; sourceTree = "<group>"; };
 		ABF6FDAB18CF67C7008E247E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ABF6FDAD18CF67C7008E247E /* AV_Technician_ToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AV_Technician_ToolkitTests.m; sourceTree = "<group>"; };
+		ABFC863018DD2356002DFD38 /* ToneGenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneGenTableViewController.h; sourceTree = "<group>"; };
+		ABFC863118DD2356002DFD38 /* ToneGenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneGenTableViewController.m; sourceTree = "<group>"; };
+		ABFC863318DD310B002DFD38 /* TroubleGuideTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TroubleGuideTableViewController.h; sourceTree = "<group>"; };
+		ABFC863418DD310B002DFD38 /* TroubleGuideTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TroubleGuideTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +163,14 @@
 				ABF6FD8318CF67C7008E247E /* Supporting Files */,
 				AB28594018DBD23A00C9E69F /* AudioRecorderViewController.h */,
 				AB28594118DBD23A00C9E69F /* AudioRecorderViewController.m */,
+				AB72340218DC8FA000ACBB52 /* DBMeterViewController.h */,
+				AB72340318DC8FA000ACBB52 /* DBMeterViewController.m */,
+				AB08645C18DD1C6A0064C49A /* AudioPlayer.h */,
+				AB08645D18DD1C6A0064C49A /* AudioPlayer.m */,
+				ABFC863018DD2356002DFD38 /* ToneGenTableViewController.h */,
+				ABFC863118DD2356002DFD38 /* ToneGenTableViewController.m */,
+				ABFC863318DD310B002DFD38 /* TroubleGuideTableViewController.h */,
+				ABFC863418DD310B002DFD38 /* TroubleGuideTableViewController.m */,
 			);
 			path = "AV Technician Toolkit";
 			sourceTree = "<group>";
@@ -282,9 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF6FD9918CF67C7008E247E /* SecondViewController.m in Sources */,
+				ABFC863518DD310B002DFD38 /* TroubleGuideTableViewController.m in Sources */,
+				AB08645E18DD1C6A0064C49A /* AudioPlayer.m in Sources */,
 				AB28593F18DB9ED800C9E69F /* MagCameraViewController.m in Sources */,
 				ABF6FD8D18CF67C7008E247E /* AppDelegate.m in Sources */,
 				AB28594218DBD23A00C9E69F /* AudioRecorderViewController.m in Sources */,
+				AB72340418DC8FA000ACBB52 /* DBMeterViewController.m in Sources */,
+				ABFC863218DD2356002DFD38 /* ToneGenTableViewController.m in Sources */,
 				ABF2DD4418DB88090094D553 /* FlashlightViewController.m in Sources */,
 				ABF6FD9618CF67C7008E247E /* FirstViewController.m in Sources */,
 				ABF6FD8918CF67C7008E247E /* main.m in Sources */,

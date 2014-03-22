@@ -12,7 +12,7 @@
 @interface AudioRecorderViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton* recordPauseButton;
-@property (weak, nonatomic) IBOutlet UIButton*stopButton;
+@property (weak, nonatomic) IBOutlet UIButton* stopButton;
 @property (weak, nonatomic) IBOutlet UIButton* playButton;
 
 -(IBAction)recordPauseTapped:(id)sender;
