@@ -2,7 +2,7 @@
 //  AudioRecorderViewController.m
 //  AV Technician Toolkit
 //
-//  Created by AV Programmer on 3/20/14.
+//  Created by AV Programmer on 3/20/14 with content and instruction by http://www.appcoda.com/ios-avfoundation-framework-tutorial/.
 //  Copyright (c) 2014 AV Services. All rights reserved.
 //
 

@@ -5,6 +5,7 @@
 //  Created by AV Programmer on 3/21/14.
 //  Copyright (c) 2014 AV Services. All rights reserved.
 //
+// audio files "WhiteNoise_64kb.mp3", "PinkNoise_64kb.mp3", and "BrownianNoise_64kb.mp3" found at
 
 #import "ToneGenTableViewController.h"
 
@@ -30,21 +31,29 @@
     [super viewDidLoad];
     @try {
         NSLog(@"Loading audio...");
+        
         NSURL *wURL = [[NSBundle mainBundle] URLForResource:@"WhiteNoise_64kb" withExtension:@"mp3"];
+        NSURL *pURL = [[NSBundle mainBundle] URLForResource:@"PinkNoise_64kb" withExtension:@"mp3"];
+        NSURL *bURL = [[NSBundle mainBundle] URLForResource:@"BrownianNoise_64kb" withExtension:@"mp3"];
+        NSURL *blURL = [[NSBundle mainBundle] URLForResource:@"audiocheck.net_bluenoise" withExtension:@"wav"];
+        NSURL *vURL = [[NSBundle mainBundle] URLForResource:@"audiocheck.net_violetnoise" withExtension:@"wav"];
+        NSURL *gURL = [[NSBundle mainBundle] URLForResource:@"audiocheck.net_greynoise" withExtension:@"wav"];
+        
         _wPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:wURL error:nil];
-        //[_wPlayer play];
-        _pPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"PinkNoise_64kb.mp3"] error:nil];
-        _bPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"BrownianNoise_64kb.mp3"] error:nil];
-        _blPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"audiocheck.net_bluenoise.wav"] error:nil];
-        _vPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"audiocheck.net_violetnoise.wav"] error:nil];
-        _gPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"audiocheck.net_greynoise.wav"] error:nil];
-        NSLog([[_wPlayer url] path]);
+        _pPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:pURL error:nil];
+        _bPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:bURL error:nil];
+        _blPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:blURL error:nil];
+        _vPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:vURL error:nil];
+        _gPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:gURL error:nil];
+        
+        
         NSLog(@"...finished loading audio");
-        //[self wTapped:_wButton];
-        [self.tableView bringSubviewToFront:_wButton];
+        
     } @catch (NSException *e){
         NSLog(@"Error loading audio file");
     }
+    
+    [_wButton setEnabled:YES];
 }
 
 - (void)didReceiveMemoryWarning
