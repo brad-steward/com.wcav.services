@@ -14,6 +14,12 @@
 		AB28593C18DB9EBB00C9E69F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB28593B18DB9EBB00C9E69F /* MobileCoreServices.framework */; };
 		AB28593F18DB9ED800C9E69F /* MagCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28593E18DB9ED800C9E69F /* MagCameraViewController.m */; };
 		AB28594218DBD23A00C9E69F /* AudioRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28594118DBD23A00C9E69F /* AudioRecorderViewController.m */; };
+		AB33C4DA18DF53B7004AA43F /* audiocheck.net_bluenoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB33C4D418DF53B7004AA43F /* audiocheck.net_bluenoise.wav */; };
+		AB33C4DB18DF53B7004AA43F /* audiocheck.net_greynoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB33C4D518DF53B7004AA43F /* audiocheck.net_greynoise.wav */; };
+		AB33C4DC18DF53B7004AA43F /* audiocheck.net_violetnoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB33C4D618DF53B7004AA43F /* audiocheck.net_violetnoise.wav */; };
+		AB33C4DD18DF53B7004AA43F /* BrownianNoise_64kb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB33C4D718DF53B7004AA43F /* BrownianNoise_64kb.mp3 */; };
+		AB33C4DE18DF53B7004AA43F /* PinkNoise_64kb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB33C4D818DF53B7004AA43F /* PinkNoise_64kb.mp3 */; };
+		AB33C4DF18DF53B7004AA43F /* WhiteNoise_64kb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB33C4D918DF53B7004AA43F /* WhiteNoise_64kb.mp3 */; };
 		AB72340418DC8FA000ACBB52 /* DBMeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72340318DC8FA000ACBB52 /* DBMeterViewController.m */; };
 		ABF2DD4418DB88090094D553 /* FlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD4318DB88090094D553 /* FlashlightViewController.m */; };
 		ABF2DD4618DB8B6C0094D553 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF2DD4518DB8B6C0094D553 /* AVFoundation.framework */; };
@@ -60,6 +66,12 @@
 		AB28593E18DB9ED800C9E69F /* MagCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagCameraViewController.m; sourceTree = "<group>"; };
 		AB28594018DBD23A00C9E69F /* AudioRecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRecorderViewController.h; sourceTree = "<group>"; };
 		AB28594118DBD23A00C9E69F /* AudioRecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRecorderViewController.m; sourceTree = "<group>"; };
+		AB33C4D418DF53B7004AA43F /* audiocheck.net_bluenoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audiocheck.net_bluenoise.wav; sourceTree = "<group>"; };
+		AB33C4D518DF53B7004AA43F /* audiocheck.net_greynoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audiocheck.net_greynoise.wav; sourceTree = "<group>"; };
+		AB33C4D618DF53B7004AA43F /* audiocheck.net_violetnoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audiocheck.net_violetnoise.wav; sourceTree = "<group>"; };
+		AB33C4D718DF53B7004AA43F /* BrownianNoise_64kb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BrownianNoise_64kb.mp3; sourceTree = "<group>"; };
+		AB33C4D818DF53B7004AA43F /* PinkNoise_64kb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PinkNoise_64kb.mp3; sourceTree = "<group>"; };
+		AB33C4D918DF53B7004AA43F /* WhiteNoise_64kb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WhiteNoise_64kb.mp3; sourceTree = "<group>"; };
 		AB72340218DC8FA000ACBB52 /* DBMeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMeterViewController.h; sourceTree = "<group>"; };
 		AB72340318DC8FA000ACBB52 /* DBMeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMeterViewController.m; sourceTree = "<group>"; };
 		ABF2DD4218DB88090094D553 /* FlashlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashlightViewController.h; sourceTree = "<group>"; };
@@ -154,6 +166,12 @@
 		ABF6FD8218CF67C7008E247E /* AV Technician Toolkit */ = {
 			isa = PBXGroup;
 			children = (
+				AB33C4D418DF53B7004AA43F /* audiocheck.net_bluenoise.wav */,
+				AB33C4D518DF53B7004AA43F /* audiocheck.net_greynoise.wav */,
+				AB33C4D618DF53B7004AA43F /* audiocheck.net_violetnoise.wav */,
+				AB33C4D718DF53B7004AA43F /* BrownianNoise_64kb.mp3 */,
+				AB33C4D818DF53B7004AA43F /* PinkNoise_64kb.mp3 */,
+				AB33C4D918DF53B7004AA43F /* WhiteNoise_64kb.mp3 */,
 				AB1C081D18DE0FEA005DA687 /* demoCSV.csv */,
 				ABF2DD4218DB88090094D553 /* FlashlightViewController.h */,
 				ABF2DD4318DB88090094D553 /* FlashlightViewController.m */,
@@ -292,11 +310,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB33C4DF18DF53B7004AA43F /* WhiteNoise_64kb.mp3 in Resources */,
 				ABF6FD9318CF67C7008E247E /* Main_iPad.storyboard in Resources */,
 				AB1C081E18DE0FEA005DA687 /* demoCSV.csv in Resources */,
 				ABF6FD9B18CF67C7008E247E /* Images.xcassets in Resources */,
+				AB33C4DB18DF53B7004AA43F /* audiocheck.net_greynoise.wav in Resources */,
 				ABF6FD9018CF67C7008E247E /* Main_iPhone.storyboard in Resources */,
+				AB33C4DA18DF53B7004AA43F /* audiocheck.net_bluenoise.wav in Resources */,
+				AB33C4DE18DF53B7004AA43F /* PinkNoise_64kb.mp3 in Resources */,
 				ABF6FD8718CF67C7008E247E /* InfoPlist.strings in Resources */,
+				AB33C4DD18DF53B7004AA43F /* BrownianNoise_64kb.mp3 in Resources */,
+				AB33C4DC18DF53B7004AA43F /* audiocheck.net_violetnoise.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

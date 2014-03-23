@@ -1,9 +1,8 @@
 //
-//  YMCAudioPlayer.m
-//  AudioPlayerTemplate
+//  AudioPlayer.m
 //
-//  Created by ymc-thzi on 13.08.13.
-//  Copyright (c) 2013 ymc-thzi. All rights reserved.
+//  Created by AV Programmer on 14.02.14.
+//  Copyright (c) 2014 AV Programmer. All rights reserved.
 //
 
 #import "AudioPlayer.h"

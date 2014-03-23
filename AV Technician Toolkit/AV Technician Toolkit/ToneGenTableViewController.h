@@ -11,13 +11,29 @@
 
 @interface ToneGenTableViewController : UITableViewController <AVAudioPlayerDelegate>
 
-@property (strong, nonatomic) IBOutlet UITableView *noiseTable;
-@property (weak, nonatomic) IBOutlet UITableViewCell *pNoiseSelector;
-@property (weak, nonatomic) IBOutlet UITableViewCell *bNoiseSelector;
-@property (weak, nonatomic) IBOutlet UITableViewCell *blNoiseSelector;
-@property (weak, nonatomic) IBOutlet UITableViewCell *vNoiseSelector;
-@property (weak, nonatomic) IBOutlet UITableViewCell *gNoiseSelector;
-@property (weak, nonatomic) IBOutlet UITableViewCell *wNoiseSelector;
 
+
+@property (retain, nonatomic) AVAudioPlayer *wPlayer;
+@property (retain, nonatomic) AVAudioPlayer *pPlayer;
+@property (retain, nonatomic) AVAudioPlayer *bPlayer;
+@property (retain, nonatomic) AVAudioPlayer *blPlayer;
+@property (retain, nonatomic) AVAudioPlayer *vPlayer;
+@property (retain, nonatomic) AVAudioPlayer *gPlayer;
+
+@property (weak, nonatomic) IBOutlet UIButton *wButton;
+@property (weak, nonatomic) IBOutlet UIButton *pButton;
+@property (weak, nonatomic) IBOutlet UIButton *bButton;
+@property (weak, nonatomic) IBOutlet UIButton *blButton;
+@property (weak, nonatomic) IBOutlet UIButton *vButton;
+@property (weak, nonatomic) IBOutlet UIButton *gButton;
+
+
+
+-(IBAction)wTapped:(id)sender;
+-(IBAction)pTapped:(id)sender;
+-(IBAction)bTapped:(id)sender;
+-(IBAction)blTapped:(id)sender;
+-(IBAction)vTapped:(id)sender;
+-(IBAction)gTapped:(id)sender;
 
 @end

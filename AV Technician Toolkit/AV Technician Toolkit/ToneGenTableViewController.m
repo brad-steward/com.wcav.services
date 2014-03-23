@@ -9,18 +9,18 @@
 #import "ToneGenTableViewController.h"
 
 @interface ToneGenTableViewController () {
-    AVAudioPlayer *player;
 }
 
 @end
 
 @implementation ToneGenTableViewController
 
+@synthesize wButton = _wButton;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -28,12 +28,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    @try {
+        NSLog(@"Loading audio...");
+        NSURL *wURL = [[NSBundle mainBundle] URLForResource:@"WhiteNoise_64kb" withExtension:@"mp3"];
+        _wPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:wURL error:nil];
+        //[_wPlayer play];
+        _pPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"PinkNoise_64kb.mp3"] error:nil];
+        _bPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"BrownianNoise_64kb.mp3"] error:nil];
+        _blPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"audiocheck.net_bluenoise.wav"] error:nil];
+        _vPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"audiocheck.net_violetnoise.wav"] error:nil];
+        _gPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:@"audiocheck.net_greynoise.wav"] error:nil];
+        NSLog([[_wPlayer url] path]);
+        NSLog(@"...finished loading audio");
+        //[self wTapped:_wButton];
+        [self.tableView bringSubviewToFront:_wButton];
+    } @catch (NSException *e){
+        NSLog(@"Error loading audio file");
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,19 +63,56 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 0;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    for (int i = 0; i<=6; i++) {
-        [[cell textLabel] setText:@"Noise"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:@"cell"];
     }
+    
     return cell;
+}*/
+
+-(IBAction)wTapped:(id)sender{
+    NSLog(@"wTapped");
+    [_wPlayer play];
+    //wait((NSInteger *) 2000);
 }
 
+-(IBAction)pTapped:(id)sender{
+    NSLog(@"pTapped");
+    [_pPlayer play];
+    wait((NSInteger *) 2000);
+    [_pPlayer stop];
+}
+
+-(IBAction)bTapped:(id)sender{
+    [_bPlayer play];
+    wait((NSInteger *) 2000);
+    [_bPlayer stop];
+}
+
+-(IBAction)blTapped:(id)sender{
+    [_blPlayer play];
+    wait((NSInteger *) 2000);
+    [_blPlayer stop];
+}
+
+-(IBAction)vTapped:(id)sender{
+    [_vPlayer play];
+    wait((NSInteger *) 2000);
+    [_vPlayer stop];
+}
+
+-(IBAction)gTapped:(id)sender{
+    [_gPlayer play];
+    wait((NSInteger *) 2000);
+    [_gPlayer stop];
+}
 
 /*
 // Override to support conditional editing of the table view.
