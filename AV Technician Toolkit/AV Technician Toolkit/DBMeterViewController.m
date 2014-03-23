@@ -9,7 +9,7 @@
 #import "DBMeterViewController.h"
 
 @interface DBMeterViewController (){
-    AVAudioRecorder* recorder;
+    
 }
 
 @end
@@ -27,42 +27,37 @@
 
 - (void)viewDidLoad
 {
+    _meterOnFlag = NO;
+    
     @try {
+        //trying the same recording path as the audio recorder, we'll deal with deletion later...
+        NSArray *pathComponents = [NSArray arrayWithObjects:
+                                   [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+                                   @"recording.m4a",
+                                   nil];
+        NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
+        
+        
         NSLog(@"Trying DBMeter");
         NSDictionary* recorderSettings = [NSDictionary dictionaryWithObjectsAndKeys:
-                                          [NSNumber numberWithInt:kAudioFormatAppleIMA4],AVFormatIDKey,
+                                          [NSNumber numberWithInt:kAudioFormatMPEG4AAC],AVFormatIDKey,
                                           [NSNumber numberWithInt:44100],AVSampleRateKey,
                                           [NSNumber numberWithInt:1],AVNumberOfChannelsKey,
                                           [NSNumber numberWithInt:16],AVLinearPCMBitDepthKey,
                                           [NSNumber numberWithBool:NO],AVLinearPCMIsBigEndianKey,
                                           [NSNumber numberWithBool:NO],AVLinearPCMIsFloatKey,
                                           nil];
-        NSError* error = nil;
         NSLog(@"Trying DBMeter later");
-        recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL URLWithString:[NSTemporaryDirectory() stringByAppendingPathComponent:@"tmp.m4a"]]  settings:recorderSettings error:&error];
-        recorder.meteringEnabled = YES;
-        [recorder record];
-        
-        float decibels = 0;
-        NSString *decString = @"";
-        
-        int i = 0;
-        
-        do {
-            [recorder updateMeters];
-            decibels = [recorder averagePowerForChannel:0];
-            decString = [[NSNumber numberWithFloat:decibels] stringValue];
-            [_meterReading setText:decString];
-            NSLog(@"update");
-            i++;
-        } while (i < 100);
-
+        //NSURL *temp = [NSURL URLWithString:[NSTemporaryDirectory() stringByAppendingPathComponent:@"temp.m4a"]];
+        NSLog(@"Trying DBMeter even later...");
+        _recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL  settings:recorderSettings error:nil];
+        NSLog(@"Trying DBMeter even more later...");
+        _recorder.meteringEnabled = YES;
+        NSLog(@"Trying DBMeter even more more later...");
     }
     @catch (NSException *exception) {
         NSLog(@"ERROR");
-    }
-    @finally {
-        [_meterReading setText:@"ERROR"];
+        NSLog([exception reason]);
     }
 }
 
@@ -70,6 +65,40 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)startButtonTapped:(id)sender{
+    if (_meterOnFlag){
+        [self startMeter];
+        [sender setTitle:@"Stop"];
+    } else {
+        [self stopMeter];
+        [sender setTitle:@"Start"];
+    }
+    
+}
+
+-(void)startMeter {
+    
+    
+    int i = 0;
+    float decibels = 0;
+    NSString *decString = @"";
+    
+    [_recorder record];
+    
+    do {
+        [_recorder updateMeters];
+        decibels = [_recorder averagePowerForChannel:0];
+        decString = [[NSNumber numberWithFloat:decibels] stringValue];
+        [_meterReading setText:decString];
+        NSLog(@"update");
+        i++;
+    } while (i < 100);
+}
+
+-(void)stopMeter {
+    
 }
 
 /*
