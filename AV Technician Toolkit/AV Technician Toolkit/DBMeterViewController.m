@@ -68,19 +68,27 @@
 }
 
 -(IBAction)startButtonTapped:(id)sender{
-    if (_meterOnFlag){
-        [self startMeter];
+    if (_meterOnFlag == NO){
         [sender setTitle:@"Stop"];
+        [self startThread];
+        _meterOnFlag = YES;
     } else {
         [self stopMeter];
         [sender setTitle:@"Start"];
+        _meterOnFlag = NO;
     }
     
 }
 
+-(void)startThread{
+    [NSThread detachNewThreadSelector:@selector(startMeter) toTarget:self withObject:nil];
+}
+
 -(void)startMeter {
-    
-    
+    [self performSelectorOnMainThread:@selector(keepTheMeterRunning) withObject:nil waitUntilDone:YES];
+}
+
+-(void)keepTheMeterRunning {
     int i = 0;
     float decibels = 0;
     NSString *decString = @"";
@@ -94,11 +102,12 @@
         [_meterReading setText:decString];
         NSLog(@"update");
         i++;
-    } while (i < 100);
+    } while (i <= 10000);
+
 }
 
 -(void)stopMeter {
-    
+    [_recorder stop];
 }
 
 /*
