@@ -12,8 +12,10 @@
 @interface DBMeterViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel* meterReading;
+@property (weak, nonatomic) IBOutlet UIButton* startStop;
 @property BOOL meterOnFlag;
 @property (retain, nonatomic) AVAudioRecorder* recorder;
+@property (retain) NSThread* meter;
 
 -(void)startMeter;
 -(void)stopMeter;

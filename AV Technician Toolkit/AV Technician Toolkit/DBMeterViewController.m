@@ -54,11 +54,16 @@
         NSLog(@"Trying DBMeter even more later...");
         _recorder.meteringEnabled = YES;
         NSLog(@"Trying DBMeter even more more later...");
+        
+        NSLog(@"Starting Thread...");
+        _meter = [[NSThread alloc] initWithTarget:self selector:@selector(startMeter) object:nil];
     }
     @catch (NSException *exception) {
         NSLog(@"ERROR");
         NSLog([exception reason]);
     }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,23 +74,23 @@
 
 -(IBAction)startButtonTapped:(id)sender{
     if (_meterOnFlag == NO){
-        [sender setTitle:@"Stop"];
-        [self startThread];
+        [_startStop setTitle:@"Stop" forState:UIControlStateApplication];
+        [_meter start];
         _meterOnFlag = YES;
     } else {
-        [self stopMeter];
-        [sender setTitle:@"Start"];
+        [_meter cancel];
+        [_startStop setTitle:@"Start" forState:UIControlStateApplication];
         _meterOnFlag = NO;
     }
     
 }
 
--(void)startThread{
-    [NSThread detachNewThreadSelector:@selector(startMeter) toTarget:self withObject:nil];
-}
+//-(void)startThread{
+    //[_meter detachNewThreadSelector:@selector(startMeter) toTarget:self withObject:nil];
+//}
 
 -(void)startMeter {
-    [self performSelectorOnMainThread:@selector(keepTheMeterRunning) withObject:nil waitUntilDone:YES];
+    //[self performSelectorOnMainThread:@selector(keepTheMeterRunning) withObject:nil waitUntilDone:YES];
 }
 
 -(void)keepTheMeterRunning {
@@ -102,7 +107,8 @@
         [_meterReading setText:decString];
         NSLog(@"update");
         i++;
-    } while (i <= 10000);
+        sleep(1);
+    } while (true);
 
 }
 
