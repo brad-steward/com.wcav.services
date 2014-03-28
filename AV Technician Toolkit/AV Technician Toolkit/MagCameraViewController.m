@@ -30,7 +30,10 @@
 {
     [super viewDidLoad];
     
-    
+    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"error" message:@"device has no camera" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,31 +74,35 @@
 }
 
 - (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker {
-    [picker dismissModalViewControllerAnimated:YES];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void) imagePickerController: (UIImagePickerController*) picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
-    UIImage *originalImage, *editedImage, *imageToSave;
     
-    //process for saving an image
-    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
-        
-        editedImage = (UIImage *) [info objectForKey:UIImagePickerControllerEditedImage];
-        originalImage = (UIImage *) [info objectForKey:UIImagePickerControllerEditedImage];
-        
-        if (editedImage) {
-            imageToSave = editedImage;
-        } else {
-            imageToSave = originalImage;
-        }
-        
-        UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil);
-    }
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.viewFinder.image = chosenImage;
     
-    [picker dismissModalViewControllerAnimated: YES];
-    //[self.imageView setImage:imageToSave];
-    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (IBAction)selectPhoto:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+- (IBAction)takePhoto:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
+}
 @end

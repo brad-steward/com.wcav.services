@@ -37,9 +37,12 @@
     }
     @catch (NSException *exception) {
         NSLog(@"Error loading the csv file");
+        _importedRows = [NSMutableArray ];
     }
     
-    }
+    NSLog(@"end of viewDidLoad");
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

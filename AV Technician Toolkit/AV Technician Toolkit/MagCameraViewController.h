@@ -11,4 +11,12 @@
 
 @interface MagCameraViewController : UIViewController
 <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+
+@property (strong, nonatomic) IBOutlet UIImageView *viewFinder;
+
+- (IBAction)selectPhoto:(id)sender;
+- (IBAction)takePhoto:(id)sender;
+
+
 @end
