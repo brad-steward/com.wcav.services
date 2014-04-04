@@ -37,7 +37,20 @@
     }
     @catch (NSException *exception) {
         NSLog(@"Error loading the csv file");
-        _importedRows = [NSMutableArray ];
+        Room *tempRoom1;
+        Room *tempRoom2;
+        Room *tempRoom3;
+        tempRoom1.building = @"Old Main";
+        tempRoom1.roomNum = @"456";
+        tempRoom1.type = @"a";
+        tempRoom2.building = @"Old Main";
+        tempRoom2.roomNum = @"234";
+        tempRoom2.type = @"d";
+        tempRoom3.building = @"Patterson";
+        tempRoom3.roomNum = @"123";
+        tempRoom3.type = @"a";
+        
+        _importedRows = [[NSMutableArray alloc] initWithObjects:tempRoom1,tempRoom2,tempRoom3, nil];
     }
     
     NSLog(@"end of viewDidLoad");
@@ -49,8 +62,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -96,15 +107,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    //if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    //}
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
+    }
     
     Room *r = (Room *)[self.importedRows objectAtIndex:indexPath.row];
-    cell.textLabel.text = r.building, @" ", r.roomNum;
+    NSString *labelText = r.building;
+    labelText = [labelText stringByAppendingString:@" "];
+    labelText = [labelText stringByAppendingString:r.roomNum];
+    cell.textLabel.text = labelText;
     
     return cell;
 }
