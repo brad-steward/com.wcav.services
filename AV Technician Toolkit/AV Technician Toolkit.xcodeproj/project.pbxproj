@@ -21,6 +21,11 @@
 		AB33C4DE18DF53B7004AA43F /* PinkNoise_64kb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB33C4D818DF53B7004AA43F /* PinkNoise_64kb.mp3 */; };
 		AB33C4DF18DF53B7004AA43F /* WhiteNoise_64kb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB33C4D918DF53B7004AA43F /* WhiteNoise_64kb.mp3 */; };
 		AB72340418DC8FA000ACBB52 /* DBMeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72340318DC8FA000ACBB52 /* DBMeterViewController.m */; };
+		ABB927541909DD4800237480 /* AudioCableGuideCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB927531909DD4800237480 /* AudioCableGuideCollectionViewController.m */; };
+		ABB927571909DE3700237480 /* miniaudio.JPG in Resources */ = {isa = PBXBuildFile; fileRef = ABB927551909DE3700237480 /* miniaudio.JPG */; };
+		ABB927581909DE3700237480 /* quarterinch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ABB927561909DE3700237480 /* quarterinch.jpg */; };
+		ABB9275B1909E1B700237480 /* AudioCableGuideCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9275A1909E1B700237480 /* AudioCableGuideCollectionView.m */; };
+		ABB9275E1909E27D00237480 /* AudioCableGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9275D1909E27D00237480 /* AudioCableGuideView.m */; };
 		ABF2DD4418DB88090094D553 /* FlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD4318DB88090094D553 /* FlashlightViewController.m */; };
 		ABF2DD4618DB8B6C0094D553 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF2DD4518DB8B6C0094D553 /* AVFoundation.framework */; };
 		ABF6FD7D18CF67C7008E247E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF6FD7C18CF67C7008E247E /* Foundation.framework */; };
@@ -74,6 +79,14 @@
 		AB33C4D918DF53B7004AA43F /* WhiteNoise_64kb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WhiteNoise_64kb.mp3; sourceTree = "<group>"; };
 		AB72340218DC8FA000ACBB52 /* DBMeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMeterViewController.h; sourceTree = "<group>"; };
 		AB72340318DC8FA000ACBB52 /* DBMeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMeterViewController.m; sourceTree = "<group>"; };
+		ABB927521909DD4800237480 /* AudioCableGuideCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCableGuideCollectionViewController.h; sourceTree = "<group>"; };
+		ABB927531909DD4800237480 /* AudioCableGuideCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCableGuideCollectionViewController.m; sourceTree = "<group>"; };
+		ABB927551909DE3700237480 /* miniaudio.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miniaudio.JPG; sourceTree = "<group>"; };
+		ABB927561909DE3700237480 /* quarterinch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quarterinch.jpg; sourceTree = "<group>"; };
+		ABB927591909E1B700237480 /* AudioCableGuideCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCableGuideCollectionView.h; sourceTree = "<group>"; };
+		ABB9275A1909E1B700237480 /* AudioCableGuideCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCableGuideCollectionView.m; sourceTree = "<group>"; };
+		ABB9275C1909E27D00237480 /* AudioCableGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCableGuideView.h; sourceTree = "<group>"; };
+		ABB9275D1909E27D00237480 /* AudioCableGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCableGuideView.m; sourceTree = "<group>"; };
 		ABF2DD4218DB88090094D553 /* FlashlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashlightViewController.h; sourceTree = "<group>"; };
 		ABF2DD4318DB88090094D553 /* FlashlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashlightViewController.m; sourceTree = "<group>"; };
 		ABF2DD4518DB8B6C0094D553 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -172,6 +185,8 @@
 				AB33C4D718DF53B7004AA43F /* BrownianNoise_64kb.mp3 */,
 				AB33C4D818DF53B7004AA43F /* PinkNoise_64kb.mp3 */,
 				AB33C4D918DF53B7004AA43F /* WhiteNoise_64kb.mp3 */,
+				ABB927551909DE3700237480 /* miniaudio.JPG */,
+				ABB927561909DE3700237480 /* quarterinch.jpg */,
 				AB1C081D18DE0FEA005DA687 /* demoCSV.csv */,
 				ABF2DD4218DB88090094D553 /* FlashlightViewController.h */,
 				ABF2DD4318DB88090094D553 /* FlashlightViewController.m */,
@@ -202,6 +217,12 @@
 				AB1C081818DE0303005DA687 /* Room.m */,
 				AB1C081A18DE05EF005DA687 /* NSString+ParsingExt.h */,
 				AB1C081B18DE05EF005DA687 /* NSString+ParsingExt.m */,
+				ABB927521909DD4800237480 /* AudioCableGuideCollectionViewController.h */,
+				ABB927531909DD4800237480 /* AudioCableGuideCollectionViewController.m */,
+				ABB927591909E1B700237480 /* AudioCableGuideCollectionView.h */,
+				ABB9275A1909E1B700237480 /* AudioCableGuideCollectionView.m */,
+				ABB9275C1909E27D00237480 /* AudioCableGuideView.h */,
+				ABB9275D1909E27D00237480 /* AudioCableGuideView.m */,
 			);
 			path = "AV Technician Toolkit";
 			sourceTree = "<group>";
@@ -311,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB33C4DF18DF53B7004AA43F /* WhiteNoise_64kb.mp3 in Resources */,
+				ABB927581909DE3700237480 /* quarterinch.jpg in Resources */,
 				ABF6FD9318CF67C7008E247E /* Main_iPad.storyboard in Resources */,
 				AB1C081E18DE0FEA005DA687 /* demoCSV.csv in Resources */,
 				ABF6FD9B18CF67C7008E247E /* Images.xcassets in Resources */,
@@ -321,6 +343,7 @@
 				ABF6FD8718CF67C7008E247E /* InfoPlist.strings in Resources */,
 				AB33C4DD18DF53B7004AA43F /* BrownianNoise_64kb.mp3 in Resources */,
 				AB33C4DC18DF53B7004AA43F /* audiocheck.net_violetnoise.wav in Resources */,
+				ABB927571909DE3700237480 /* miniaudio.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,10 +364,13 @@
 			files = (
 				ABF6FD9918CF67C7008E247E /* SecondViewController.m in Sources */,
 				ABFC863518DD310B002DFD38 /* TroubleGuideTableViewController.m in Sources */,
+				ABB9275E1909E27D00237480 /* AudioCableGuideView.m in Sources */,
 				AB1C081C18DE05EF005DA687 /* NSString+ParsingExt.m in Sources */,
+				ABB9275B1909E1B700237480 /* AudioCableGuideCollectionView.m in Sources */,
 				AB08645E18DD1C6A0064C49A /* AudioPlayer.m in Sources */,
 				AB28593F18DB9ED800C9E69F /* MagCameraViewController.m in Sources */,
 				ABF6FD8D18CF67C7008E247E /* AppDelegate.m in Sources */,
+				ABB927541909DD4800237480 /* AudioCableGuideCollectionViewController.m in Sources */,
 				AB28594218DBD23A00C9E69F /* AudioRecorderViewController.m in Sources */,
 				AB1C081918DE0303005DA687 /* Room.m in Sources */,
 				AB72340418DC8FA000ACBB52 /* DBMeterViewController.m in Sources */,
